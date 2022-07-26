@@ -1,0 +1,9 @@
+nav.navbar {
+    max-height: unset;
+    height: 112px
+}
+
+.navbar-item img {
+    max-height: 95px;
+}
+

@@ -1,0 +1,75 @@
+.hero {
+    background-image: url('/assets/home-background.jpg')
+    !important;
+    background-size: cover;
+    background-position: center center;
+    
+}
+
+.card {
+    margin-right: auto;
+    margin-left: auto;
+    width: 300px;
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+    height: 300px;
+    border-radius: 5px;
+    backdrop-filter: blur(14px);
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    text-align: center;
+}
+
+p.measurements-number {
+    font-weight: bold;
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  p.measurements-text {
+    /* font-style: italic; */
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3px;
+  }
+  
+  @media (max-width: 400px) {
+    p.measurements-text {
+      font-size: small;
+    }
+  }
+  
+  div.countdown {
+    display: block;
+  }
+  
+  div.Days.measurements {
+    width: 25%;
+    float: left;
+    border-right: 2px solid black;
+  }
+  
+  div.Hours.measurements {
+    width: 25%;
+    float: left;
+    border-right: 2px solid black;
+  }
+  
+  div.Mins.measurements {
+    width: 25%;
+    float: left;
+    border-right: 2px solid black;
+  }
+  
+  div.Secs.measurements {
+    width: 25%;
+    float: left;
+  }
+  
+  .countdown[_ngcontent-dyv-c40] .measurements[_ngcontent-rog-c40] {
+    flex: none;
+  }
