@@ -12,11 +12,15 @@ export class HomeComponent implements OnInit {
   nextRace: any = {};
   nextRaceTime: string = '';
   nextRaceTimeConverted: string = '';
+  nextRaceDateConverted: string = ''
   nextRaceTD: string = '';
   nextRaceLoading: boolean = true;
   nextRaceUTCtime: string = '';
   nextRaceLocaltime: string = '';
+  tempDate: string = ';'
   newDate = Date();
+  demo: string = '';
+  
   
 
   text: any = {
@@ -46,6 +50,18 @@ export class HomeComponent implements OnInit {
       this.nextRaceUTCtime = res.MRData.RaceTable.Races[0].time.slice(0, -4);
       var createdDateTime = new Date(this.nextRaceTD);
       this.nextRaceTimeConverted = createdDateTime.toString().slice(16, -33);
+
+      this.nextRaceDateConverted = createdDateTime.toString().slice(4, -33);
+      var countDownDate =  new Date(this.nextRaceDateConverted).getTime();
+      var x = setInterval(()=>{
+          var now = new Date().getTime();
+          var difference = countDownDate - now;
+          var days = Math.floor(difference/(1000*60*60*24));
+          var hours = Math.floor((difference % (1000*60*60*24)) / (1000*60*60));
+          var minutes = Math.floor((difference % (1000*60*60)) / (1000*60));
+          var seconds = Math.floor((difference % (1000*60)) / 1000);
+          this.demo = days + 'D ' +  hours + "H " + minutes + "M " + seconds + "S ";
+      })
       // Set loading to false
       this.nextRaceLoading = false;
     });

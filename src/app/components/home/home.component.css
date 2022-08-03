@@ -68,8 +68,13 @@ p.measurements-number {
   div.Secs.measurements {
     width: 25%;
     float: left;
+  }  
+
+
+  .countdown {
+    text-align: center;
   }
   
-  .countdown[_ngcontent-dyv-c40] .measurements[_ngcontent-rog-c40] {
-    flex: none;
+  ::ng-deep .countdown.countdown {
+    display: block !important;
   }

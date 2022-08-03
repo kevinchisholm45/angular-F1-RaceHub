@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { CountdownModule } from 'ng2-date-countdown/src/index';
+
+
 
 @NgModule({
   declarations: [
@@ -15,7 +18,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   imports: [
     HttpClientModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CountdownModule
   ],
   providers: [],
   bootstrap: [AppComponent]
