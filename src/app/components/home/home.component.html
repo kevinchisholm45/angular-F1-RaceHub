@@ -2,16 +2,16 @@
     <div class="hero-body">
         <div class ="container">
             <div class ='card'>
-                <div class ='card-header text-center'>
-                    <h3>
+                <div class ='card-header'>
+                    <p>
                         Next Race:
                         <span *ngIf="!nextRaceLoading" class="font-weight-bold">{{
                           nextRace[0].raceName
                         }}</span>
-                      </h3>
+                      </p>
                       
                       <p *ngIf="!nextRaceLoading">
-                        {{ nextRace[0].Circuit.circuitName }} |
+                        {{ nextRace[0].Circuit.circuitName }} 
                         {{ nextRace[0].date | date: "dd/MM/yyyy" }}
                         <span class="font-italic text-muted">({{ nextRaceTimeConverted}} EST)</span>
                         
@@ -19,7 +19,8 @@
                 </div>
                 <div class="card-content">
                   <div class="countdown-container">
-                    <span class="font-italic ">{{demo}}</span>
+                    
+                    <span class="countdown-font">  Next Race Countdown: {{demo}}</span>
                   </div>
                 </div>
             </div>

@@ -4,14 +4,23 @@
     background-size: cover;
     background-position: center center;
     
+    
+}
+
+.hero-body{
+  text-align: center;
+}
+
+.container{
+  text-align: center;
 }
 
 .card {
-    margin-right: auto;
-    margin-left: auto;
-    width: 350px;
+    margin-right: 10%;
+    margin-left: 10%;
+    width: auto;
     box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
-    height: 400px;
+    height: auto;
     border-radius: 5px;
     backdrop-filter: blur(14px);
     background-color: rgba(255, 255, 255, 0.2);
@@ -20,36 +29,39 @@
 }
 
 .card-header {
+  font-size: 170%;
+  height: 100px;
+  text-align: center;
   font-weight: bolder;
   color: black;
   text-shadow: 0.5px 0.5px 1px white;
   font-family: "Monaco", Monospace;
 }
 
-.countdown-container {
-  padding: 0rem;
-  margin: 0.5rem;
-  display: flex;
-  justify-content: center;
-  
-  
-}
-
-
-.countdown-font{
-  margin: 0rem;
-  font-size: 2.5rem;
+.card-content {
+  text-align: center;
   font-weight: bolder;
-  padding: 0px;
   color: black;
-  text-shadow: 0.5px 0.5px 1px white, 0 0 20px rgb(0, 192, 245), 0 0 5px rgb(2, 2, 45);
   font-family: "Monaco", Monospace;
 }
+.column{
+  background-color: rgba(0, 208, 245, 0.2);
+}
 
-.countdown {
-  text-align: left;
+
+h3 {
+    font-size: 150%;
+    text-align: center;
+  }
+  
+h4 {
+  font-size: large;
 }
   
-::ng-deep .countdown.countdown {
-  display: block !important;
+h5 {
+  font-size: medium;
+}
+  
+span{
+  text-align: center;
 }

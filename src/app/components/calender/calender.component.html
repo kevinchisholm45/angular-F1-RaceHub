@@ -1,0 +1,40 @@
+<section class="hero is-primary is-bold is-fullheight">
+    <div class="hero-body">
+        <div class ="container">
+            <div class="card"> 
+                <div class="card-header">
+                    <h3 class="card-header-title is-centered">
+                        2022 F1 Grand Prix Calendar
+                    </h3>
+                </div>
+            
+                <ng-container *ngIf="!raceCalendarLoading">
+                    <div class="card-content" *ngFor="let race of raceCalendar.Races">
+                        <div class="columns">
+                            <div class="column is-narrow" >
+                                <img
+                                    src="assets/flags/{{ race.Circuit.Location.country }}.png"
+                                    alt=""
+                                    style="width: 60px; height: auto;"
+                                />
+                            </div>
+                            <div class="column">
+                                <h4>
+                                    <span>Race Week {{ race.round }}</span> -
+                                    {{ race.raceName }}
+                                </h4>
+                                <h5 class="font-italic">{{ race.Circuit.circuitName }}</h5>
+                            </div>
+                            <div class="column is-narrow">
+                                <h4 style="margin-left: 0;">{{ race.date | date: "dd/MM/yyyy" }}</h4>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+    <a href="https://www.flaticon.com/free-icons/flag" title="flag icons">Flag icons created by Freepik - Flaticon</a>
+</section>
+
+
